@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- My Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          fontFamily: {
+            bitter: ["Bitter", "serif"],
+            poppins: ["Poppins", "sans-serif"],
+            roboto: ["Roboto Slab", "serif"],
+          },
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- My CSS -->
+    <style type="text/tailwindcss">
+      /* * {
+        border: 1px solid black;
+      } */
+
+      .card:hover .fill {
+        display: block;
+      }
+
+      .card:hover .image,
+      .card:hover .file {
+        filter: blur(2px);
+      }
+    </style>
+
+    <!-- My Icon CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <!-- My Font CDN -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitter&family=Poppins:wght@300&family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body id="home">
+    <!-- Header Section -->
+    <header>
+      <!-- Top Section -->
+      <div
+        class="md:bg-gray-800 text-white dark:bg-gray-200 dark:text-gray-900"
+      >
+        <div
+          class="md:w-4/5 md:h-7 md:m-auto md: md:flex md:justify-between md:font-roboto hidden"
+        >
+          <div>
+            <a href="#home">gebeapparel</a>
+          </div>
+          <ul class="flex gap-5">
+            <li>
+              <a
+                href=""
+                class="flex items-center md:after:contents[''] md:after:h-3 md:after:w-1 md:after:bg-white md:after:ms-5 md:after:rounded-full md:after:block dark:after:bg-gray-900 hover:text-green-500"
+                >Favorite</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="flex items-center md:after:contents[''] md:after:h-3 md:after:w-1 md:after:bg-white md:after:ms-5 md:after:rounded-full md:after:block dark:after:bg-gray-900 hover:text-green-500"
+                >Help</a
+              >
+            </li>
+            <li>
+              <a
+                href=""
+                class="flex items-center md:after:contents[''] md:after:h-3 md:after:w-1 md:after:bg-white md:after:ms-5 md:after:rounded-full md:after:block dark:after:bg-gray-900 hover:text-green-500"
+                >Join Us</a
+              >
+            </li>
+            <li><a href="" class="hover:text-green-500">Sign In</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Navbar Section -->
+      <nav class="fixed w-full z-10 bg-white dark:bg-gray-900 dark:text-white">
+        <div
+          class="w-11/12 md:w-4/5 h-20 m-auto flex justify-between items-center"
+        >
+          <div class="w-40">
+            <a
+              href="#home"
+              class="font-[poppins] text-2xl italic cursor-pointer"
+              >Gebe</a
+            >
+          </div>
+          <div
+            class="top-20 absolute md:static -right-full w-3/5 transition-all"
+            id="navBar"
+          >
+            <ul
+              class="md:flex md:gap-10 md:justify-center shadow-lg md:shadow-none dark:text-white px-4 md:p-0"
+            >
+              <li class="py-4">
+                <a
+                  href="#collection"
+                  class="font-[bitter] text-lg font-semibold text-gray-200 hover:text-black relative after:w-0 after:contents[''] after:absolute after:bg-green-500 after:right-0 after:h-1 after:block hover:after:w-full after:-bottom-2 after:transition-[0.3s] dark:text-gray-700 dark:hover:text-white"
+                  >Collection</a
+                >
+              </li>
+              <li class="py-4">
+                <a
+                  href="#limited"
+                  class="font-[bitter] text-lg font-semibold text-gray-200 hover:text-black relative after:w-0 after:contents[''] after:absolute after:bg-green-500 after:right-0 after:h-1 after:block hover:after:w-full after:-bottom-2 after:transition-[0.3s] dark:text-gray-700 dark:hover:text-white"
+                  >Limited</a
+                >
+              </li>
+              <li class="py-4">
+                <a
+                  href="#article"
+                  class="font-[bitter] text-lg font-semibold text-gray-200 hover:text-black relative after:w-0 after:contents[''] after:absolute after:bg-green-500 after:right-0 after:h-1 after:block hover:after:w-full after:-bottom-2 after:transition-[0.3s] dark:text-gray-700 dark:hover:text-white"
+                  >Article</a
+                >
+              </li>
+              <li class="py-4">
+                <a
+                  href="#discount"
+                  class="font-[bitter] text-lg font-semibold text-gray-200 hover:text-black after:w-0 relative after:contents[''] after:absolute after:bg-green-500 after:right-0 after:h-1 after:block hover:after:w-full after:-bottom-2 after:transition-[0.3s] dark:text-gray-700 dark:hover:text-white"
+                  >Discount</a
+                >
+              </li>
+              <li class="py-4">
+                <a
+                  href="#contact"
+                  class="font-[bitter] text-lg font-semibold text-gray-200 hover:text-black after:w-0 relative after:contents[''] after:absolute after:bg-green-500 after:right-0 after:h-1 after:block hover:after:w-full after:-bottom-2 after:transition-[0.3s] dark:text-gray-700 dark:hover:text-white"
+                  >Contact</a
+                >
+              </li>
+              <hr class="mb-4" />
+              <div class="md:hidden pb-5">
+                <li class="mb-5">
+                  <a href="" class="font-[poppins] font-semibold italic"
+                    >gebeapparel</a
+                  >
+                </li>
+                <li>
+                  <p class="font-[bitter] text-sm italic">
+                    Become a gebeapparel Member for the best products,
+                    inspiration and stories in sport.
+                    <a href="" class="font-bold">learn more</a>
+                  </p>
+                </li>
+
+                <div class="flex my-8 justify-center gap-4">
+                  <li>
+                    <a
+                      href=""
+                      class="py-1 px-4 hover:bg-green-600 bg-green-500 text-white font-[bitter] font-semibold rounded-xl"
+                      >Login</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="py-1.5 px-4 hover:bg-green-600 bg-green-500 text-white font-[bitter] font-semibold rounded-xl"
+                      >Sign Up</a
+                    >
+                  </li>
+                </div>
+
+                <div class="flex flex-col gap-1.5">
+                  <li>
+                    <a href="" class="font-[poppins] font-semibold"
+                      ><i class="fa-regular fa-heart me-3 text-lg"></i
+                      >Favorite</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="font-[poppins] font-semibold"
+                      ><i class="fa-regular fa-circle-question me-3 text-lg"></i
+                      >Help</a
+                    >
+                  </li>
+                </div>
+              </div>
+            </ul>
+          </div>
+          <div
+            class="w-40 text-end flex md:justify-end md:gap-3 gap-4 items-center"
+          >
+            <i class="fa-solid fa-cart-shopping cursor-pointer"></i>
+            <i class="fa-solid fa-magnifying-glass cursor-pointer"></i>
+            <select
+              name=""
+              id=""
+              class="font-[bitter] bg-transparent dark:text-white cursor-pointer"
+            >
+              <option value="" id="light" class="dark:text-black">Light</option>
+              <option value="" id="dark" class="dark:text-black">Dark</option>
+            </select>
+            <i
+              class="fa-solid fa-bars m-auto md:hidden cursor-pointer"
+              id="barNav"
+            ></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main
+      class="w-full min-h-screen pt-20 m-auto bg-gray-200 dark:bg-gray-700 dark:text-white"
+    >
+      <!-- Hero Section -->
+      <section
+        class="w-11/12 md:w-4/5 m-auto md:flex md:items-center md:justify-center py-12"
+      >
+        <div class="md:me-7 md:w-1/2">
+          <h1 class="pt-10 pb-4 font-[bitter] text-3xl font-semibold">
+            Best Arrivals
+          </h1>
+          <p class="font-[poppins] font-medium text-sm text-justify">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+            quidem autem pariatur eligendi placeat ea officia eveniet odit,
+            voluptates odio iusto rerum voluptatem sint dolore?
+          </p>
+          <div class="py-4 text-green-500 hover:text-green-600">
+            <a href="" class="font-[bitter] pe-1 font-semibold"
+              >View Collection</a
+            >
+            <a href=""><i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="flex items-center justify-center md:w-1/2">
+          <img src="./asset/image/hero1.png" alt="" class="w-2/3 md:w-full" />
+        </div>
+      </section>
+      <!-- Collection Section -->
+      <section
+        class="w-full bg-white min-h-screen py-12 dark:bg-gray-900"
+        id="collection"
+      >
+        <div class="w-full m-auto">
+          <div class="text-center py-10 w-4/5 m-auto">
+            <div class="flex items-center justify-center gap-5">
+              <div class="w-12 h-2 bg-green-500"></div>
+              <h1 class="font-[poppins] italic text-2xl font-extrabold">
+                Our Collection
+              </h1>
+              <div class="w-12 h-2 bg-green-500"></div>
+            </div>
+            <p class="font-[bitter] text-sm pt-4 md:w-11/12 m-auto">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Quibusdam quisquam non cumque assumenda laudantium voluptatum
+              aliquam autem quia dolore aliquid?
+            </p>
+          </div>
+          <div class="md:flex md:w-4/5 m-auto md:flex-wrap bg-transparent">
+            <div
+              class="card cursor-pointer md:w-1/4 w-3/4 p-4 m-auto flex items-center justify-center flex-col hover:bg-black/50 dark:hover:bg-white/50 overflow-hidden"
+            >
+              <div class="image">
+                <img src="./asset/image/collection1.png" alt="" />
+              </div>
+              <div class="file flex flex-col items-center -mt-8 pb-5">
+                <h1 class="font-[bitter] text-lg font-semibold">
+                  Lorem ipsum dolor sit
+                </h1>
+                <a
+                  href=""
+                  class="text-green-500 font-[poppins] text-lg font-semibold"
+                  >lorem
+                </a>
+                <span>
+                  <i class="fa-solid fa-star text-yellow-500"></i>
+                  <i class="fa-solid fa-star text-yellow-500"></i>
+                  <i class="fa-solid fa-star text-yellow-500"></i>
+                  <i class="fa-solid fa-star text-yellow-500"></i>
+                  <i class="fa-solid fa-star text-yellow-500"></i>
+                </span>
+              </div>
+              <div class="absolute hidden fill 0">
+                <i
+                  class="fa-solid fa-eye p-2 bg-green-500 hover:bg-green-600"
+                ></i>
+                <i class="fa-regular fa-heart p-2 bg-gray-400"></i>
+              </div>
+            </div>
+
+            <div
+              class="card cursor-pointer md:w-1/4 w-3/4 p-4 m-auto flex items-center justify-center flex-col hover:bg-black/50 dark:hover:bg-white/50 overflow-hidden"
+            >
+              <div class="image">
+                <img src="./asset/image/collection2.png" alt="" />
+              </div>
+              <div class="file flex flex-col items-center -mt-8 pb-5">
+                <h1 class="font-[bitter] text-lg font-semibold">
+                  Lorem ipsum dolor sit
+                </h1>
+                <a
+                  href=""
+                  class="text-green-500 font-[poppins] text-lg font-semibold"
+                  >lorem
+                </a>
+                <span>
+                  <i class="fa-solid fa-star text-yellow-500"></i>
+                  <i class="fa-solid fa-star text-yellow-500"></i>
+                  <i class="fa-solid fa-star text-yellow-500"></i>
+                  <i class="fa-solid fa-star text-yellow-500"></i>
+                  <i class="fa-solid fa-star text-yellow-500"></i>
+                </span>
+              </div>
+              <div class="absolute hidden fill 0">
+                <i
+                  class="fa-solid fa-eye p-2 bg-green-500 hover:bg-green-600"
+                ></i>
+                <i class="fa-regular fa-heart p-2 bg-gray-200"></i>
+              </div>
+            </div>
+            <div
+              class="card cursor-pointer md:w-1/4 w-3/4 p-4 m-auto flex items-center justify-center flex-col hover:bg-black/50 dark:hover:bg-white/50 overflow-hidden"
+            >
+              <div class="image">
+                <img src="./asset/image/collection3.png" alt="" />
+              </div>
+              <div class="file flex flex-col items-center -mt-8 pb-5">
+                <h1 class="font-[bitter] text-lg font-semibold">
+                  Lorem ipsum dolor sit
+                </h1>
+                <a
+                  href=""
+                  class="text-green-500 font-[poppins] text-lg font-semibold"
+                  >lorem
+                </a>
+                <span>
+                  <i class="fa-solid fa-star text-yellow-500"></i>
+                  <i class="fa-solid fa-star text-yellow-500"></i>
+                  <i class="fa-solid fa-star text-yellow-500"></i>
+                  <i class="fa-solid fa-star text-yellow-500"></i>
+                  <i class="fa-solid fa-star text-yellow-500"></i>
+                </span>
+              </div>
+              <div class="absolute hidden fill 0">
+                <i
+                  class="fa-solid fa-eye p-2 bg-green-500 hover:bg-green-600"
+                ></i>
+                <i class="fa-regular fa-heart p-2 bg-gray-200"></i>
+              </div>
+            </div>
+            <div
+              class="card cursor-pointer md:w-1/4 w-3/4 p-4 m-auto flex items-center justify-center flex-col hover:bg-black/50 dark:hover:bg-white/50 overflow-hidden"
+            >
+              <div class="image">
+                <img src="./asset/image/collection4.png" alt="" />
+              </div>
+              <div class="file flex flex-col items-center -mt-8 pb-5">
+                <h1 class="font-[bitter] text-lg font-semibold">
+                  Lorem ipsum dolor sit
+                </h1>
+                <a
+                  href=""
+                  class="text-green-500 font-[poppins] text-lg font-semibold"
+                  >lorem
+                </a>
+                <span>
+                  <i class="fa-solid fa-star text-yellow-500"></i>
+                  <i class="fa-solid fa-star text-yellow-500"></i>
+                  <i class="fa-solid fa-star text-yellow-500"></i>
+                  <i class="fa-solid fa-star text-yellow-500"></i>
+                  <i class="fa-solid fa-star text-yellow-500"></i>
+                </span>
+              </div>
+              <div class="absolute hidden fill 0">
+                <i
+                  class="fa-solid fa-eye p-2 bg-green-500 hover:bg-green-600"
+                ></i>
+                <i class="fa-regular fa-heart p-2 bg-gray-200"></i>
+              </div>
+            </div>
+            <div
+              class="card cursor-pointer md:w-1/4 w-3/4 p-4 m-auto flex items-center justify-center flex-col hover:bg-black/50 dark:hover:bg-white/50 overflow-hidden"
+            >
+              <div class="image">
+                <img src="./asset/image/collection5.png" alt="" />
+              </div>
+              <div class="file flex flex-col items-center -mt-8 pb-5">
+                <h1 class="font-[bitter] text-lg font-semibold">
+                  Lorem ipsum dolor sit
+                </h1>
+                <a
+                  href=""
+                  class="text-green-500 font-[poppins] text-lg font-semibold"
+                  >lorem
+                </a>
+                <span>
+                  <i class="fa-solid fa-star text-yellow-500"></i>
+                  <i class="fa-solid fa-star text-yellow-500"></i>
+                  <i class="fa-solid fa-star text-yellow-500"></i>
+                  <i class="fa-solid fa-star text-yellow-500"></i>
+                  <i class="fa-solid fa-star text-yellow-500"></i>
+                </span>
+              </div>
+              <div class="absolute hidden fill 0">
+                <i
+                  class="fa-solid fa-eye p-2 bg-green-500 hover:bg-green-600"
+                ></i>
+                <i class="fa-regular fa-heart p-2 bg-gray-200"></i>
+              </div>
+            </div>
+            <div
+              class="card cursor-pointer md:w-1/4 w-3/4 p-4 m-auto flex items-center justify-center flex-col hover:bg-black/50 dark:hover:bg-white/50 overflow-hidden"
+            >
+              <div class="image">
+                <img src="./asset/image/collection6.png" alt="" />
+              </div>
+              <div class="file flex flex-col items-center -mt-8 pb-5">
+                <h1 class="font-[bitter] text-lg font-semibold">
+                  Lorem ipsum dolor sit
+                </h1>
+                <a
+                  href=""
+                  class="text-green-500 font-[poppins] text-lg font-semibold"
+                  >lorem
+                </a>
+                <span>
+                  <i class="fa-solid fa-star text-yellow-500"></i>
+                  <i class="fa-solid fa-star text-yellow-500"></i>
+                  <i class="fa-solid fa-star text-yellow-500"></i>
+                  <i class="fa-solid fa-star text-yellow-500"></i>
+                  <i class="fa-solid fa-star text-yellow-500"></i>
+                </span>
+              </div>
+              <div class="absolute hidden fill 0">
+                <i
+                  class="fa-solid fa-eye p-2 bg-green-500 hover:bg-green-600"
+                ></i>
+                <i class="fa-regular fa-heart p-2 bg-gray-200"></i>
+              </div>
+            </div>
+            <div
+              class="card cursor-pointer md:w-1/4 w-3/4 p-4 m-auto flex items-center justify-center flex-col hover:bg-black/50 dark:hover:bg-white/50 overflow-hidden"
+            >
+              <div class="image">
+                <img src="./asset/image/collection7.png" alt="" />
+              </div>
+              <div class="file flex flex-col items-center -mt-8 pb-5">
+                <h1 class="font-[bitter] text-lg font-semibold">
+                  Lorem ipsum dolor sit
+                </h1>
+                <a
+                  href=""
+                  class="text-green-500 font-[poppins] text-lg font-semibold"
+                  >lorem
+                </a>
+                <span>
+                  <i class="fa-solid fa-star text-yellow-500"></i>
+                  <i class="fa-solid fa-star text-yellow-500"></i>
+                  <i class="fa-solid fa-star text-yellow-500"></i>
+                  <i class="fa-solid fa-star text-yellow-500"></i>
+                  <i class="fa-solid fa-star text-yellow-500"></i>
+                </span>
+              </div>
+              <div class="absolute hidden fill 0">
+                <i
+                  class="fa-solid fa-eye p-2 bg-green-500 hover:bg-green-600"
+                ></i>
+                <i class="fa-regular fa-heart p-2 bg-gray-200"></i>
+              </div>
+            </div>
+            <div
+              class="card cursor-pointer md:w-1/4 w-3/4 p-4 m-auto flex items-center justify-center flex-col hover:bg-black/50 dark:hover:bg-white/50 overflow-hidden"
+            >
+              <div class="image">
+                <img src="./asset/image/collection8.png" alt="" />
+              </div>
+              <div class="file flex flex-col items-center -mt-8 pb-5">
+                <h1 class="font-[bitter] text-lg font-semibold">
+                  Lorem ipsum dolor sit
+                </h1>
+                <a
+                  href=""
+                  class="text-green-500 font-[poppins] text-lg font-semibold"
+                  >lorem
+                </a>
+                <span>
+                  <i class="fa-solid fa-star text-yellow-500"></i>
+                  <i class="fa-solid fa-star text-yellow-500"></i>
+                  <i class="fa-solid fa-star text-yellow-500"></i>
+                  <i class="fa-solid fa-star text-yellow-500"></i>
+                  <i class="fa-solid fa-star text-yellow-500"></i>
+                </span>
+              </div>
+              <div class="absolute hidden fill 0">
+                <i
+                  class="fa-solid fa-eye p-2 bg-green-500 hover:bg-green-600"
+                ></i>
+                <i class="fa-regular fa-heart p-2 bg-gray-200"></i>
+              </div>
+            </div>
+          </div>
+          <div></div>
+        </div>
+      </section>
+
+      <!-- Limited Section -->
+      <section class="w-full bg-gray-200 py-24 dark:bg-gray-700" id="limited">
+        <div class="w-11/12 m-auto md:w-4/5 md:flex md:justify-center">
+          <div class="md:w-1/2 flex flex-col justify-center">
+            <h1 class="font-[bitter] text-4xl font-semibold">Nike Cortez SE</h1>
+            <h1 class="font-[bitter] text-4xl tracking-widest">
+              The Best Classical
+            </h1>
+            <p class="font-[bitter] text-sm my-4">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+              dolorem nobis, totam molestias iusto ea perspiciatis illum, fugiat
+              harum pariatur optio id, sunt rem itaque!
+            </p>
+            <div>
+              <button
+                class="py-1.5 px-4 bg-green-400 rounded-md text-white font-[bitter] font-bold hover:bg-green-600"
+              >
+                Buy Now
+              </button>
+            </div>
+          </div>
+          <div class="md:w-1/2">
+            <img src="./asset/image/limited.png" alt="" class="w-full" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Article Section -->
+      <section class="bg-white py-24 dark:bg-gray-900" id="article">
+        <div
+          class="w-11/12 m-auto flex md:w-4/5 md:flex-row flex-col justify-center gap-5"
+        >
+          <div
+            class="rounded-md md:w-4/12 hover:shadow-lg dark:hover:shadow-2xl transition-all"
+          >
+            <div>
+              <img src="./asset/image/article1.jpg" alt="" />
+            </div>
+            <div class="w-11/12 m-auto">
+              <h1 class="font-[bitter] text-lg font-bold py-2">
+                Lorem ipsum dolor sit
+              </h1>
+              <p class="font-[bitter] tracking-wider text-sm pb-2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+                veritatis fuga nulla voluptates dicta reprehenderit?
+              </p>
+              <button
+                class="text-green-500 hover:text-green-600 pb-5 font-[bitter] font-bold text-sm"
+              >
+                Read More
+              </button>
+            </div>
+          </div>
+          <div
+            class="rounded-md md:w-4/12 hover:shadow-lg dark:hover:shadow-2xl transition-all"
+          >
+            <div>
+              <img src="./asset/image/article3.jpg" alt="" />
+            </div>
+            <div class="w-11/12 m-auto">
+              <h1 class="font-[bitter] text-lg font-bold py-2">
+                Lorem ipsum dolor sit
+              </h1>
+              <p class="font-[bitter] tracking-wider text-sm pb-2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+                veritatis fuga nulla voluptates dicta reprehenderit?
+              </p>
+              <button
+                class="text-green-500 hover:text-green-600 pb-5 font-[bitter] font-bold text-sm"
+              >
+                Read More
+              </button>
+            </div>
+          </div>
+          <div
+            class="rounded-md md:w-4/12 hover:shadow-lg dark:hover:shadow-2xl transition-all"
+          >
+            <div>
+              <img src="./asset/image/article2.jpg" alt="" />
+            </div>
+            <div class="w-11/12 m-auto">
+              <h1 class="font-[bitter] text-lg font-bold py-2">
+                Lorem ipsum dolor sit
+              </h1>
+              <p class="font-[bitter] tracking-wider text-sm pb-2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+                veritatis fuga nulla voluptates dicta reprehenderit?
+              </p>
+              <button
+                class="text-green-500 hover:text-green-600 pb-5 font-[bitter] font-bold text-sm"
+              >
+                Read More
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Discount Section -->
+      <section class="py-24 bg-gray-200 dark:bg-gray-700" id="discount">
+        <div
+          class="w-11/12 m-auto md:w-4/5 flex flex-col gap-5 md:flex-row md:items-center"
+        >
+          <div class="md:w-11/12">
+            <img src="./asset/image/sab1.png" alt="" class="image-discount" />
+          </div>
+          <div class="md:w-1/2">
+            <div class="flex flex-col gap-3">
+              <div>
+                <h1 class="font-[bitter] font-semibold text-3xl">
+                  Sabrina 1 By You
+                </h1>
+                <span>
+                  <i class="fa-solid fa-star text-yellow-500 text-sm"></i>
+                  <i class="fa-solid fa-star text-yellow-500 text-sm"></i>
+                  <i class="fa-solid fa-star text-yellow-500 text-sm"></i>
+                  <i class="fa-solid fa-star text-yellow-500 text-sm"></i>
+                  <i class="fa-solid fa-star text-sm"></i>
+                </span>
+              </div>
+              <p class="font-[poppins] text-sm">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Asperiores ab consequatur esse harum optio nemo error labore
+                facilis vel distinctio.
+              </p>
+            </div>
+            <div class="mt-4 flex flex-col gap-4">
+              <div class="flex gap-1">
+                <span
+                  class="rounded-full bg-white w-5 h-5 block sabrin cursor-pointer"
+                ></span>
+                <span
+                  class="rounded-full bg-yellow-400 w-5 h-5 block sabrin1 cursor-pointer"
+                ></span>
+                <span
+                  class="rounded-full bg-black w-5 h-5 block sabrin2 cursor-pointer"
+                ></span>
+              </div>
+              <button class="text-start">
+                <span
+                  class="bg-green-500 py-1.5 px-3 rounded-lg font-[bitter] font-semibold text-white hover:bg-green-600"
+                  >Buy Now</span
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section
+        class="bg-white py-24 md:h-[550px] dark:bg-gray-900"
+        id="contact"
+      >
+        <div
+          class="w-11/12 m-auto bg-white text-black rounded-lg shadow-lg md:flex md:items-center md:flex-row-reverse md:h-full md:w-4/5"
+        >
+          <div class="md:w-1/2 md:h-full">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.3764653918684!2d106.60581367418257!3d-6.213981060863387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fea332963869%3A0xe1398bf693ee9fd8!2sJl.%20Sawo%20Raya%2C%20RT.001%2FRW.024%2C%20Cibodasari%2C%20Kec.%20Cibodas%2C%20Kota%20Tangerang%2C%20Banten!5e0!3m2!1sid!2sid!4v1698041215012!5m2!1sid!2sid"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              class="w-full h-full m-auto"
+            ></iframe>
+          </div>
+          <div class="flex flex-col gap-2 py-4 md:px-10 px-3 md:w-1/2">
+            <div class="flex flex-col gap-2 mb-3">
+              <h1
+                class="font-[bitter] font-semibold text-xl after:w-10 after:contents[''] after:block after:bg-green-500 after:h-1 Contact Us"
+              >
+                Contact Us
+              </h1>
+              <p class="font-[poppins] text-sm">
+                reach out to us for any inquery
+              </p>
+            </div>
+            <div class="border border-solid border-gray-200">
+              <input
+                type="text"
+                placeholder="Full Name"
+                class="w-full p-2 bg-transparent font-[bitter] text-sm"
+              />
+            </div>
+            <div class="border border-solid border-gray-200">
+              <input
+                type="text"
+                placeholder="Your Name"
+                class="w-full p-2 bg-transparent font-[bitter] text-sm"
+              />
+            </div>
+            <div class="border border-solid border-gray-200">
+              <textarea
+                placeholder="Massage"
+                class="w-full h-24 p-2 bg-transparent font-[bitter] text-sm"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="bg-green-500 py-1.5 font-[bitter] text-white font-semibold rounded-md hover:bg-green-600"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+      <!-- Start Footer Section -->
+      <section class="bg-gray-200 py-12 dark:bg-gray-700 dark:text-white">
+        <div
+          class="w-11/12 md:w-4/5 m-auto flex flex-col gap-10 md:justify-evenly md:flex-row md:gap-20"
+        >
+          <div>
+            <h1
+              class="font-[bitter] text-2xl italic font-medium text-green-500"
+            >
+              gebeapparel
+            </h1>
+            <div class="flex flex-col gap-1 mt-3">
+              <p class="font-[bitter] font-medium hover:text-green-500">
+                <i class="fa-solid fa-location-dot pe-3"></i>Tangerang, Banten
+              </p>
+              <p class="font-[bitter] font-medium hover:text-green-500">
+                <i class="fa-solid fa-phone pe-3"></i>62824*****
+              </p>
+              <p class="font-[bitter] font-medium hover:text-green-500">
+                <i class="fa-solid fa-envelope pe-3"></i
+                >gibranrizkip10@gmail.com
+              </p>
+            </div>
+          </div>
+          <div>
+            <h1 class="font-[bitter] text-2xl font-semibold">Further Info</h1>
+            <div class="flex flex-col gap-1 mt-3">
+              <a href="" class="font-[bitter] font-medium hover:text-green-500"
+                >Contact Us</a
+              >
+              <a href="" class="font-[bitter] font-medium hover:text-green-500"
+                >FAQ'S</a
+              >
+              <a href="" class="font-[bitter] font-medium hover:text-green-500"
+                >Term</a
+              >
+              <a href="" class="font-[bitter] font-medium hover:text-green-500"
+                >Help</a
+              >
+              <a href="" class="font-[bitter] font-medium hover:text-green-500"
+                >About Us</a
+              >
+            </div>
+          </div>
+          <div>
+            <h1 class="font-[bitter] text-2xl font-semibold">Our Service</h1>
+            <div class="flex flex-col gap-1 mt-3">
+              <a href="" class="font-[bitter] font-medium hover:text-green-500"
+                >Brand Collection</a
+              >
+              <a href="" class="font-[bitter] font-medium hover:text-green-500"
+                >Limited Edition</a
+              >
+              <a href="" class="font-[bitter] font-medium hover:text-green-500"
+                >Article</a
+              >
+              <a href="" class="font-[bitter] font-medium hover:text-green-500"
+                >Discount</a
+              >
+            </div>
+          </div>
+          <div>
+            <h1 class="font-[bitter] text-2xl font-semibold">
+              Get Social Media
+            </h1>
+            <div class="flex md:justify-center mt-3">
+              <a
+                href=""
+                class="font-[bitter] font-medium px-2.5 py-1 rounded-full hover:bg-green-500 hover:transition-all hover:text-white hover:font-bold dark:hover:text-gray-700"
+              >
+                <i class="fa-brands fa-instagram text-lg"></i>
+              </a>
+              <a
+                href=""
+                class="font-[bitter] font-medium px-2.5 py-1 rounded-full hover:bg-green-500 hover:transition-all hover:text-white hover:font-bold dark:hover:text-gray-700"
+              >
+                <i class="fa-brands fa-github text-lg"></i>
+              </a>
+              <a
+                href=""
+                class="font-[bitter] font-medium px-2.5 py-1 rounded-full hover:bg-green-500 hover:transition-all hover:text-white hover:font-bold dark:hover:text-gray-700"
+              >
+                <i class="fa-brands fa-linkedin text-lg"></i>
+              </a>
+              <a
+                href=""
+                class="font-[bitter] font-medium px-2.5 py-1 rounded-full hover:bg-green-500 hover:transition-all hover:text-white hover:font-bold dark:hover:text-gray-700"
+              >
+                <i class="fa-brands fa-x-twitter text-lg"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Footer Section -->
+      <section class="bg-gray-900 h-12 drop-shadow-lg dark:bg-gray-200">
+        <div class="flex justify-center items-center h-full">
+          <h1 class="text-white font-[bitter] text-center dark:text-black">
+            copyright &copy;2023 All rights reserved | This Website Design By
+            <a href="" class="text-green-500 italic font-semibold"
+              >gibranrizkipratama</a
+            >
+          </h1>
+        </div>
+      </section>
+    </footer>
+
+    <!-- My JS -->
+    <script src="./asset/js/index.js"></script>
+  </body>
+</html>
